@@ -1,13 +1,12 @@
 public class UC2HardcodedPalindrome {
-
     public static void main(String[] args) {
-        // Hardcoded input
         String input = "madam";
+        String reversed = "";
 
-        // Reverse the string
-        String reversed = new StringBuilder(input).reverse().toString();
+        for (int i = input.length() - 1; i >= 0; i--) {
+            reversed = reversed + input.charAt(i);
+        }
 
-        // Check palindrome
         if (input.equals(reversed)) {
             System.out.println(input + " is a Palindrome");
         } else {
